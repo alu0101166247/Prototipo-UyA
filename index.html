@@ -21,8 +21,8 @@
                     <a href="./index.html" class="brand-logo">&nbspGestión ULL</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a class="modal-trigger" href="#iniciar">Iniciar sesión</a></li>
-                        <li><a class="modal-trigger" href="#registro">Registrarse</a></li>
+                        <li><a tabindex="0" class="modal-trigger" tabindex="0" href="#iniciar">Iniciar sesión</a></li>
+                        <li><a tabindex="0" class="modal-trigger" tabindex="0" href="#registro">Registrarse</a></li>
                         <li><a href="./info.html">Información</a></li>
                         <li><a href="./consejos.html">Consejos y herramientas</a></li>
                         <li><a href="./quienes_somos.html">Quienes Somos</a></li>
@@ -56,8 +56,8 @@
                     <div class="col s6">
                         <p>¿Olvidaste la contraseña? <a href="#olvidoclave" name="recuperarcontraseña">Recuperar contraseña</a></p>
                     </div>
-                    <div class="col s6" tabindex="0">
-                        <a type="submit" onclick="iniciarSesion()" class="modal-close waves-effect waves-light btn">Iniciar Sesión</a>
+                    <div class="col s6">
+                        <a type="submit" onclick="iniciarSesion()" class="modal-close waves-effect waves-light btn" tabindex="0">Iniciar Sesión</a>
                     </div>
                 </div>   
             </div>
@@ -116,8 +116,8 @@
                     <input id="repassword" type="password" name="re-password" aria-required="true" aria-label="Repita la contraseña utilizada">
                 </form>
             </div>
-            <div class="modal-footer" tabindex="0">
-                <a type="submit" onclick="registrar()" class="modal-close waves-effect waves-light btn" aria-label="Terminar registro">Registrar</a>
+            <div class="modal-footer">
+                <a type="submit" onclick="registrar()" class="modal-close waves-effect waves-light btn" aria-label="Terminar registro" tabindex="0">Registrar</a>
             </div>
         </div>
 
