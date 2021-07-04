@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Gestión ULL - Inicio</title>
+        <meta name="author" content="Bruno, Daniel, Miguel, Jonay">
+        <meta name="description" content="La mejor opción para organizar tu tiempo">
+        <link rel="icon" type="icon" href="imagenes/icons/calendar-flat.png"/>
+        <link href="css/materialize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <!-- Nav bar -->
+        <header>       
+            <nav aria-label="Menu de navegacion">
+                <div class="deep-purple nav-wrapper">
+                    <a href="./index.html" class="brand-logo">&nbspGestión ULL</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a class="modal-trigger" href="#iniciar">Iniciar sesión</a></li>
+                        <li><a class="modal-trigger" href="#registro">Registrarse</a></li>
+                        <li><a href="./info.html">Información</a></li>
+                        <li><a href="./consejos.html">Consejos y herramientas</a></li>
+                        <li><a href="./quienes_somos.html">Quienes Somos</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="sidenav" id="mobile-demo" tabindex="-1">
+                <li><a tabindex="-1" class="modal-trigger" tabindex="-1" href="#iniciar">Iniciar sesión</a></li>
+                <li><a tabindex="-1" class="modal-trigger" tabindex="-1" href="#registro">Registrarse</a></li>
+                <li><a tabindex="-1" href="./info.html">Información</a></li>
+                <li><a tabindex="-1" href="./consejos.html">Consejos y herramientas</a></li>
+                <li><a tabindex="-1" href="./quienes_somos.html">Quienes Somos</a></li>
+            </ul>
+        </header>
+
+        <!-- Modal del botón iniciar sesión -->
+        <div id="iniciar" class="modal">
+            <div class="modal-content">
+                <h3>Inicio de sesión</h3>
+                <form action="#iniciosesion" method="post">
+                    <label>Correo electrónico: </label>
+                    <input id="correoInicio" type="text" name="correo" alt="El correo del usuario.">
+                    <br>
+                    <label>Contraseña:</label>
+                    <input id="passwordInicio" type="password" name="password" alt="La contraseña para iniciar sesión.">
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col s6">
+                        <p>¿Olvidaste la contraseña? <a href="#olvidoclave" name="recuperarcontraseña">Recuperar contraseña</a></p>
+                    </div>
+                    <div class="col s6">
+                        <a type="submit" onclick="iniciarSesion()" class="modal-close waves-effect waves-light btn">Iniciar Sesión</a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        <!-- Modal registrarse -->
+        <div id="registro" class="modal" role="form" aria-modal="true">
+            <div class="modal-content">
+                <h3>Registro</h3>
+                <p>
+                    A continuación se muestra una serie de campos que debe rellenar para completar su registro.
+                    Los campos que contengan el símbolo &quot*&quot son obligatorios.
+                </p>
+                <form action="#registrar" method="post">
+                    <p>Nombre: (*)</p>
+                    <input id="nombre" type="text" name="nombre" aria-required="true" aria-label="Introduzca su nombre">
+
+                    <p>Apellido: (*)</p>
+                    <input id="apellido" type="text" name="apellido" aria-required="true" aria-label="Introduzca su apellido">
+
+                    <p>(*)Genero:</p>
+                    
+                    <p>
+                        <label>
+                            <input id="generoh" name="group1" class="with-gap" type="radio" checked aria-describedby="dhombre"/>
+                            <span id="dhombre">Hombre</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input id="generom" name="group1" class="with-gap" type="radio" checked aria-describedby="dmujer"/>
+                            <span id="dmujer">Mujer</span>
+                        </label>
+                    </p>
+
+                    <div class="input-field col s12" aria-label="Lista de ciudades">
+                        <select id="ciudad">
+                            <option value="" disabled selected>Ciudad (*)</option>
+                            <option value="1">Santa Cruz</option>
+                            <option value="2">La laguna</option>
+                            <option value="3">La Orotava</option>
+                            <option value="4">Los realejos</option>
+                            <option value="5">Tacoronte</option>
+                            <option value="6">Icod de los vinos</option>
+                            <option value="7">Puerto de la Cruz</option>
+                        </select>
+                    </div>
+
+                    <p>Correo electrónico: (*)</p>
+                    <input id="correo" type="text" name="correo" aria-required="true" aria-label="Introduzca un correo electrónico">
+
+                    <p>Contraseña: (*)</p>
+                    <input id="password" type="password" name="password" aria-required="true" aria-label="Introduzca una contraseña">
+
+                    <p>Repite la contraseña: (*)</p>
+                    <input id="repassword" type="password" name="re-password" aria-required="true" aria-label="Repita la contraseña utilizada">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a type="submit" onclick="registrar()" class="modal-close waves-effect waves-light btn" aria-label="Terminar registro">Registrar</a>
+            </div>
+        </div>
+
+        <!-- Sección con info y link al texto en tarjeta-->
+        <div class="blue white-text center">
+            <div class="container">
+                <div class="section">
+                    <h2><em>¡Organiza tu tiempo y optimiza tus estudios!</em></h2>
+                    <p>
+                        Esta herramienta te ayudara a obtener los mejores resultados académicos gestionando de forma optima tu tiempo de estudio y ocio.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Primera imagen con parallax -->
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="imagenes/portada1.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Sección con info -->
+        <div class="blue white-text center">
+            <div class="container">
+                <div class="section">
+                    <h4>¡Tiempos de entrega sin estrés!</h4>
+                    <p>
+                        Hacer a tiempo los trabajos de la universidad y cumplir con todos los tiempos de espera, solo depende de ti y como te organizas. Por ello te ayudaremos a
+                        optimizar tu tiempo y mejorar tu resultado académico de manera muy fácil e intuitiva.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda imagen con parallax -->
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="imagenes/portada2.jpg" alt="">
+            </div>
+        </div>
+        
+        <!-- Opiniones -->
+        <div class="blue white-text center">
+            <div class="container">
+                <div class="section">
+                    <h4>Opiniones de usuarios</h4>
+                    <p>
+                        Profesores y alumnos cuentan su experiencia con nosotros.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+            <div class="row">
+            <div class="col s6">
+                 <ul class="collection">
+                    <li class="collection-item avatar">
+                      <img src="imagenes/bruno.jpg" alt="" class="circle">
+                      <span class="title">Bruno Lorenzo</span>
+                      <p>
+                          Muy buena herramienta, ahora tengo más tiempo libre.
+                      </p>
+                      <a href="#!" class="secondary-content"><i class="material-icons">account_circle</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                      <img src="imagenes/miguel.jpg" alt="" class="circle">
+                      <span class="title">José Miguel</span>
+                      <p>
+                          Me ha gustado mucho.
+                      </p>
+                      <a href="#!" class="secondary-content"><i class="material-icons">account_circle</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                      <img src="imagenes/jonay.jpg" alt="" class="circle">
+                      <span class="title">Jonay Estévez</span>
+                      <p>
+                          Excelente aplicación.
+                      </p>
+                      <a href="#!" class="secondary-content"><i class="material-icons">account_circle</i></a>
+                    </li>
+                  </ul>
+            </div>
+            <div class="col s6">
+                 <ul class="collection">
+                    <li class="collection-item avatar">
+                      <img src="imagenes/isabel.jpg" alt="" class="circle">
+                      <span class="title">Isabel Sánchez</span>
+                      <p>
+                          Me ha gustado bastante,  <br>
+                          aunque le falta algo de trabajo todavía.
+                      </p>
+                      <a href="#!" class="secondary-content"><i class="material-icons">account_circle</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                      <img src="imagenes/sande.jpg" alt="" class="circle">
+                      <span class="title">Francisco de Sande</span>
+                      <p>
+                          No esta mal.. Podría mejorar..
+                      </p>
+                      <a href="#!" class="secondary-content"><i class="material-icons">account_circle</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                      <img src="imagenes/dany.jpg" alt="" class="circle">
+                      <span class="title">José Daniel</span>
+                      <p>
+                          Una app sencilla y eficaz.
+                      </p>
+                      <a href="#!" class="secondary-content"><i class="material-icons">account_circle</i></a>
+                    </li> 
+                  </ul>
+            </div>
+        </div>
+        
+        <!-- Pie de pagina -->
+        <footer class="deep-purple page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5>Universidad de la laguna</h5>
+                        <a href="./mapa_web.html"><b>Mapa Web</b></a>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Grupo 5</h5>
+                        <h6>Integrantes:</h6>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" >José Daniel Fuentes Marra</a></li>
+                            <li><a class="grey-text text-lighten-3" >Bruno Lorenzo Arroyo Pedraza</a></li>
+                            <li><a class="grey-text text-lighten-3" >José Miguel Hernández Santana</a></li>
+                            <li><a class="grey-text text-lighten-3" >Jonay Estévez Díaz</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2021 ULL - USABILIDAD Y ACCESIBILIDAD
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="js/materialize.js"></script>
+        <script src="js/script_info.js"></script>
+        <script src="js/registro.js"></script>
+        <script src="js/inicioSesion.js"></script>
+        <!-- FIREBASE -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+        <script src="js/inicio.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyB1-8PPY_bFOiYos2tr0NxIz5rfWp9v0JI",
+                authDomain: "gestion2-57c47.firebaseapp.com",
+                databaseURL: "https://gestion2-57c47-default-rtdb.firebaseio.com",
+                projectId: "gestion2-57c47",
+                storageBucket: "gestion2-57c47.appspot.com",
+                messagingSenderId: "793868737428",
+                appId: "1:793868737428:web:0f007597f7c7f559724d81"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.parallax');
+                var instances = M.Parallax.init(elems);
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems);
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems);
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gestión ULL - Perfil</title>
+    <meta name="author" content="Bruno, Daniel, Miguel, Jonay">
+    <meta name="description" content="La mejor opción para organizar tu tiempo">
+    <link rel="icon" type="icon" href="imagenes/icons/calendar-flat.png"/>
+    <link href="css/materialize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body style="background-image: url('imagenes/portada1.jpg');">
+        
+    <!-- Nav bar -->
+    <header>       
+        <nav aria-label="Menu de navegacion">
+            <div class="deep-purple nav-wrapper">
+                <a href="./index.html" class="brand-logo">&nbspGestión ULL</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a onclick="logOut()" href="#">Cerrar Sesión</a></li>
+                    <li><a href="./info.html">Información</a></li>
+                    <li><a href="./consejos.html">Consejos y herramientas</a></li>
+                    <li><a href="./quienes_somos.html">Quienes Somos</a></li>
+                </ul>
+            </div>
+            <!-- Breadcrumb -->
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="./index.html" class="breadcrumb" aria-label="volver a la página de inicio">&nbsp&nbsp&nbspInicio</a>
+                    <a href="#!" class="breadcrumb" aria-label="Estas en la página de tu perfil">Perfil</a>
+                </div>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo" tabindex="-1">
+            <li><a tabindex="-1" onclick="logOut()" tabindex="-1" href="#">Cerrar Sesión</a></li>
+            <li><a tabindex="-1" href="./info.html">Información</a></li>
+            <li><a tabindex="-1" href="./consejos.html">Consejos y herramientas</a></li>
+            <li><a tabindex="-1" href="./quienes_somos.html">Quienes Somos</a></li>
+        </ul>
+    </header>
+
+    <!-- Bienvenido-->
+    <div class="blue white-text center">
+        <div class="container">
+            <div class="section">
+                <h2 id="baner-perfil"><em>Cargando...</em></h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Primera imagen con parallax -->
+    <div class="row">
+        <div class="col s12 m12 l6 center-align">
+            <br>
+            <iframe src="https://calendar.google.com/calendar/embed?height=450&amp;wkst=2&amp;bgcolor=%232196f3&amp;ctz=Atlantic%2FCanary&amp;src=Y18yZDY1b2Rja3QzYTdoajkxdjJ2ZDlqaDdoa0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;showTabs=0&amp;showNav=1&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;title=Estilo" style="border-width:0" width="650" height="450" frameborder="0" scrolling="no"></iframe>    
+        </div>
+        <div class="col s12 m12 l6 center-align">
+        <br>
+        <div class="container">
+            <ul class="collection with-header">
+                <li class="collection-header" style="background-color: #2196F3">
+                    <h4>Tareas</h4>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle">task</i>
+                    <div><b>Redes</b><p>Entregar práctica 1</p>
+                        <a href="#!" class="secondary-content"><i class="material-icons cdel" id="cdelete">delete</i></a></div>
+                </li>
+            </ul>
+            <p data-target="modal1" class="btn-floating btn-large waves-effect waves-light blue right modal-trigger" id="btnadd"><i
+                    class="material-icons">add</i></p>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="input-field col l6 m6 s6">
+                            <i class="material-icons prefix">view_headline</i>
+                            <input id="icon_title" type="text" class="validate">
+                            <label for="icon_title">Título</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">subject</i>
+                            <input id="icon_descrip" type="text" class="validate">
+                            <label for="icon_descrip">Descripción</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" id="modalclick">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="addclick">Agregar</a>
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="material-icons prefix">cancel</i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Pie de pagina -->
+    <footer class="deep-purple page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5>Universidad de la laguna</h5>
+                    <a href="./mapa_web.html"><b>Mapa Web</b></a>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Grupo 5</h5>
+                    <h6>Integrantes:</h6>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" >José Daniel Fuentes Marra</a></li>
+                        <li><a class="grey-text text-lighten-3" >Bruno Lorenzo Arroyo Pedraza</a></li>
+                        <li><a class="grey-text text-lighten-3" >José Miguel Hernández Santana</a></li>
+                        <li><a class="grey-text text-lighten-3" >Jonay Estévez Díaz</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 ULL - USABILIDAD Y ACCESIBILIDAD
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/materialize.js"></script>
+    
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyB1-8PPY_bFOiYos2tr0NxIz5rfWp9v0JI",
+            authDomain: "gestion2-57c47.firebaseapp.com",
+            databaseURL: "https://gestion2-57c47-default-rtdb.firebaseio.com",
+            projectId: "gestion2-57c47",
+            storageBucket: "gestion2-57c47.appspot.com",
+            messagingSenderId: "793868737428",
+            appId: "1:793868737428:web:0f007597f7c7f559724d81"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script src="js/perfil.js"></script>
+    <script src="js/inicio.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+</html>

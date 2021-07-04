@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+        <meta charset="utf-8">
+        <title>Gestión ULL - Quienes somos</title>
+        <meta name="author" content="Bruno, Daniel, Miguel, Jonay">
+        <meta name="description" content="La mejor opción para organizar tu tiempo">
+        <link rel="icon" type="icon" href="imagenes/icons/calendar-flat.png"/>
+        <link href="css/materialize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+        
+    <!-- Navegación -->
+    <header>       
+        <nav aria-label="Menu de navegacion">
+            <!-- Nav bar -->
+            <div class="deep-purple nav-wrapper">
+                <a href="./index.html" class="brand-logo">&nbspGestión ULL</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="./info.html">Información</a></li>
+                    <li><a href="./consejos.html">Consejos y herramientas</a></li>
+                    <li><a href="./quienes_somos.html">Quienes Somos</a></li>
+                </ul>
+            </div>
+            <!-- Breadcrumb -->
+            <div class="nav-wrapper">
+                <div class="col s12">
+                  <a href="./index.html" class="breadcrumb" aria-label="volver a la página de inicio">&nbsp&nbsp&nbspInicio</a>
+                  <a href="#!" class="breadcrumb" aria-label="Estas en la página quienes somos">Mapa web</a>
+                </div>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo" tabindex="-1">
+            <li><a tabindex="-1" href="./info.html">Información</a></li>
+            <li><a tabindex="-1" href="./consejos.html">Consejos y herramientas</a></li>
+            <li><a tabindex="-1" href="./quienes_somos.html">Quienes Somos</a></li>
+        </ul>
+    </header>
+
+    <!-- Quienes somos-->
+    <div class="blue white-text center">
+        <div class="container">
+            <div class="section">
+                <h2 id="baner-perfil">Mapa Web</h2>
+            </div>
+        </div>
+    </div>     
+    <div>
+        <br><br>
+        <div class="row deep-purple white-text center">
+            <div class="col s12 m12 l3 center-align">
+                <ul>
+                    <li><h4>Inicio</h4></li>
+                    <hr>
+                    <li class="blue-text"><b>Iniciar sesión</b></li>
+                    <li class="blue-text"><b>Registrarse</b></li>
+                    <li><a href="./info.html"><b>Información</b></a></li>
+                    <li><a href="./consejos.html"><b>Consejos y herramientas</b></a></li>
+                    <li><a href="./quienes_somos.html"><b>Quienes Somos</b></a></li>
+                </ul>
+            </div>
+            <div class="col s12 m12 l3 center-align">
+                <ul>
+                    <li><h4>Información</h4></li>
+                    <hr>
+                    <li><a href="./consejos.html"><b>Consejos y herramientas</b></a></li>
+                    <li><a href="./quienes_somos.html"><b>Quienes Somos</b></a></li>
+                </ul>
+            </div>
+            <div class="col s12 m12 l3 center-align">
+                <ul>
+                    <li><h4>Consejos y herramientas</h4></li>
+                    <hr>
+                    <li><a href="./info.html"><b>Información</b></a></li>
+                    <li><a href="./quienes_somos.html"><b>Quienes Somos</b></a></li>
+                </ul>
+            </div>
+            <div class="col s12 m12 l3 center-align">
+                <ul>
+                    <li><h4>Quienes Somos</h4></li>
+                    <hr>
+                    <li><a href="./info.html"><b>Información</b></a></li>
+                    <li><a href="./consejos.html"><b>Consejos y herramientas</b></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       
+    <!-- Pie de pagina -->
+    <footer class="deep-purple page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5>Universidad de la laguna</h5>
+                    <a href="./mapa_web.html"><b>Mapa Web</b></a>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Grupo 5</h5>
+                    <h6>Integrantes:</h6>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" >José Daniel Fuentes Marra</a></li>
+                        <li><a class="grey-text text-lighten-3" >Bruno Lorenzo Arroyo Pedraza</a></li>
+                        <li><a class="grey-text text-lighten-3" >José Miguel Hernández Santana</a></li>
+                        <li><a class="grey-text text-lighten-3" >Jonay Estévez Díaz</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 ULL - USABILIDAD Y ACCESIBILIDAD
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/materialize.js"></script>
+    <script src="js/script_info.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+  </body>
+</html>
